@@ -1,0 +1,206 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/equation_textview"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="right"
+            android:maxLines="1"
+            android:textSize="45dp" />
+
+        <TextView
+            android:id="@+id/result_textview"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:gravity="right"
+            android:hint="0"
+            android:textSize="65dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/ded"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/mul"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/div"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="/" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/one"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/two"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/three"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/ca"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="CA" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/four"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/five"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/six"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/c"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="C" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/seven"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/eight"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/nine"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/equal"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="=" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/abs"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="abs" />
+
+        <Button
+            android:id="@+id/zero"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/dot"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="." />
+
+        <Button
+            android:id="@+id/exchange"
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_weight="1"
+            android:text="切换" />
+    </LinearLayout>
+
+</LinearLayout>
