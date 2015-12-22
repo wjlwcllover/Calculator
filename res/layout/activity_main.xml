@@ -179,7 +179,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
-            android:text="abs" />
+            android:text=" " />
 
         <Button
             android:id="@+id/zero"
