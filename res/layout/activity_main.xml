@@ -39,28 +39,40 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
-            android:text="+" />
+            android:alpha="8"
+            android:background="@+drawable/backimage"
+            android:text="+"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/ded"
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
-            android:text="-" />
+            android:alpha="8"
+            android:background="@+drawable/backimage"
+            android:text="-"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/mul"
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
-            android:text="*" />
+            android:alpha="8"
+            android:background="@+drawable/backimage"
+            android:text="*"
+            android:textSize="40dp" />
 
         <Button
             android:id="@+id/div"
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
-            android:text="/" />
+            android:alpha="8"
+            android:background="@+drawable/backimage"
+            android:text="/"
+            android:textSize="40dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,6 +86,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="1" />
 
         <Button
@@ -81,6 +94,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="2" />
 
         <Button
@@ -88,6 +102,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="3" />
 
         <Button
@@ -95,6 +110,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/yellow"
             android:text="CA" />
     </LinearLayout>
 
@@ -109,6 +125,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="4" />
 
         <Button
@@ -116,6 +133,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="5" />
 
         <Button
@@ -123,6 +141,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="6" />
 
         <Button
@@ -130,6 +149,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/yellow"
             android:text="C" />
     </LinearLayout>
 
@@ -144,6 +164,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="7" />
 
         <Button
@@ -151,6 +172,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="8" />
 
         <Button
@@ -158,6 +180,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="9" />
 
         <Button
@@ -165,6 +188,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/yellow"
             android:text="=" />
     </LinearLayout>
 
@@ -179,13 +203,15 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
-            android:text=" " />
+            android:background="@+drawable/yellow"
+            android:text="(" />
 
         <Button
             android:id="@+id/zero"
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/blue"
             android:text="0" />
 
         <Button
@@ -193,6 +219,7 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
+            android:background="@+drawable/yellow"
             android:text="." />
 
         <Button
@@ -200,7 +227,8 @@
             android:layout_width="87dp"
             android:layout_height="87dp"
             android:layout_weight="1"
-            android:text="切换" />
+            android:background="@+drawable/yellow"
+            android:text=")" />
     </LinearLayout>
 
 </LinearLayout>

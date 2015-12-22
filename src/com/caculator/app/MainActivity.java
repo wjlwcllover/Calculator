@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
 
 	private Button equalButton;
 	private Button absButton;
+	private Button switchButton;
 	private Button pointButton;
 
 	// 对应equation TextView中的 值
@@ -57,49 +58,70 @@ public class MainActivity extends Activity {
 		addButton = (Button) findViewById(R.id.add);
 		addButton.setOnClickListener(new OnClickListener() {
 
-			@Override
+			@SuppressLint("NewApi") @Override
 			public void onClick(View v) {
 				if (!resultInResultView.equals("0")) {
 					equationTextView.setText(resultInResultView);
 				}
-				equationTextView.append("+");
+				
+				if(equationTextView.getText().toString().isEmpty())
+				    equationTextView.append("0+");
+				else if(EndWithCalculator(equationTextView.getText().toString())) 
+					equationTextView.append("(0+");
+				else 
+					equationTextView.append("+");
 
 			}
 		});
 		dedButton = (Button) findViewById(R.id.ded);
 		dedButton.setOnClickListener(new OnClickListener() {
 
-			@Override
+			@SuppressLint("NewApi") @Override
 			public void onClick(View v) {
 				// 如果resultInResultView 中的数组不为0
 				// 就将这个字符串 替代进resultInEquationView中
 				if (!resultInResultView.equals("0")) {
 					equationTextView.setText(resultInResultView);
 				}
-				equationTextView.append("-");
+				if(equationTextView.getText().toString().isEmpty())
+				    equationTextView.append("0-");
+				else if(EndWithCalculator(equationTextView.getText().toString())) 
+					equationTextView.append("(0-");
+				else 
+					equationTextView.append("-");
 			}
 		});
 
 		mulButton = (Button) findViewById(R.id.mul);
 		mulButton.setOnClickListener(new OnClickListener() {
 
-			@Override
+			@SuppressLint("NewApi") @Override
 			public void onClick(View v) {
 				if (!resultInResultView.equals("0")) {
 					equationTextView.setText(resultInResultView);
 				}
-				equationTextView.append("*");
+				if(equationTextView.getText().toString().isEmpty())
+				    equationTextView.append("0*");
+				else if(EndWithCalculator(equationTextView.getText().toString())) 
+					equationTextView.append("(0*");
+				else 
+					equationTextView.append("*");
 			}
 		});
 		divButton = (Button) findViewById(R.id.div);
 		divButton.setOnClickListener(new OnClickListener() {
 
-			@Override
+			@SuppressLint("NewApi") @Override
 			public void onClick(View v) {
 				if (!resultInResultView.equals("0")) {
 					equationTextView.setText(resultInResultView);
 				}
-				equationTextView.append("/");
+				if(equationTextView.getText().toString().isEmpty())
+				    equationTextView.append("0/");
+				else if(EndWithCalculator(equationTextView.getText().toString())) 
+					equationTextView.append("(0/");
+				else 
+					equationTextView.append("/");
 			}
 		});
 
@@ -235,18 +257,14 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		//更改按钮属性，改为取余
+		//更改按钮属性，改为括号
 		absButton = (Button) findViewById(R.id.abs);
 		absButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				if(resultTextView.getText().toString() == "0")
-				{
-					//如果没有进行运算输入，不能进行取余
-				}
-				else 
-				equationTextView.append("%");
+				 
+				equationTextView.append("(");
 				
 			}
 		});
@@ -277,6 +295,16 @@ public class MainActivity extends Activity {
 					}
 				}
 
+			}
+		});
+		
+		switchButton = (Button) findViewById(R.id.exchange);
+		switchButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				equationTextView.append(")");
+				
 			}
 		});
 		pointButton = (Button) findViewById(R.id.dot);
@@ -315,6 +343,18 @@ public class MainActivity extends Activity {
 	public boolean EndWithCalculator() {
 		char end = resultInEquationView
 				.charAt(resultInEquationView.length() - 1);
+		
+		// 判断最后的字符是否为 运算符号，不管用户输入了几个运算符号，最后一个一定是运算符号，只要最后一个是运算符号即可判断为不可运算
+		if (end == '+' || end == '-' || end == '*' || end == '/') {
+			return true;
+		} else
+			return false;
+
+	}
+
+	public boolean EndWithCalculator(String s) {
+		char end = s
+				.charAt(s.length() - 1);
 		
 		// 判断最后的字符是否为 运算符号，不管用户输入了几个运算符号，最后一个一定是运算符号，只要最后一个是运算符号即可判断为不可运算
 		if (end == '+' || end == '-' || end == '*' || end == '/') {
